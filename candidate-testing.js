@@ -1,8 +1,8 @@
 const input = require('readline-sync');
 
 
-let candidateName;
-let question;
+let candidateName = '';
+let question = '';
 let correctAnswer = "Sally Ride";
 let candidateAnswer= '';
 let questions = [
@@ -12,7 +12,7 @@ let questions = [
   'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ',
   'What is the minimum crew size for the ISS? '
   ];
-let correctAnswers = ['Sally Ride', 'True', '40', 'Trajectory', '3'];
+let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 let candidateAnswers = [];
 
 
