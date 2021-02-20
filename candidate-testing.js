@@ -29,6 +29,7 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers){
   let successAnswers = 0 
+  let grade = 0
   console.log(`\nCandidate Name: ${candidateName}`)
   for (let i = 0; i < questions.length; i++) { 
     if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
@@ -36,7 +37,7 @@ function gradeQuiz(candidateAnswers){
     } 
     console.log(`${1 + i}) ${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}\n`)
   }
-  let grade = successAnswers/5*100
+  grade = successAnswers/5*100
   let passFail = 'FAILED';
   if (grade >= 80){
     passFail = 'PASSED'
