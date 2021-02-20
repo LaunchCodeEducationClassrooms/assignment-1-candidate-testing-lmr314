@@ -14,7 +14,6 @@ let questions = [
   ];
 let correctAnswers = ['Sally Ride', 'True', '40', 'Trajectory', '3'];
 let candidateAnswers = [];
-let successAnswers = 0 
 
 
 function askForName() {
@@ -29,6 +28,7 @@ function askQuestion() {
 }
 
 function gradeQuiz(candidateAnswers){
+  let successAnswers = 0 
   console.log(`\nCandidate Name: ${candidateName}`)
   for (let i = 0; i < questions.length; i++) { 
     if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()) {
