@@ -4,7 +4,7 @@ const input = require('readline-sync');
 let candidateName;
 let question;
 let correctAnswer = "Sally Ride";
-let candidateAnswer;
+let candidateAnswer= '';
 let questions = [
   'Who was the first American woman in space? ',
   'True or false: 5 kilometer == 5000 meters. ',
@@ -43,12 +43,11 @@ function gradeQuiz(candidateAnswers){
     passFail = 'PASSED'
   }
   console.log(`>>> Overall Grade: ${grade}% (${successAnswers} of 5 responses correct) <<<\n>>> Status: ${passFail} <<<`)
+  return grade
 };
 
 function runProgram() {
   askForName();
-  // TODO 1.1c: Ask for candidate's name //
-  
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
